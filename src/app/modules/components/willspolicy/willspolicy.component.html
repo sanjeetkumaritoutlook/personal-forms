@@ -1,0 +1,13 @@
+
+    <div class="wills-policy" id="formio">
+        <formio [form]="form" [submission]="submission" [refresh]="refreshForm" (submit)="onSubmit()" (change)="setSubmission($event,'form1')"></formio>
+        
+        <pre *ngIf="rendered">{{serializedForm }}</pre>
+        <button class="btn save-button" (click)="showData()">Show data</button>
+    </div>
+
+
+    
+   
+
+    

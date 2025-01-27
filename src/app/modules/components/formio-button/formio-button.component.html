@@ -1,0 +1,20 @@
+<div id="formio"></div>
+<style type="text/css">
+        </style>
+<script type="text/javacript">
+    Formio.use({
+        components: {
+            fluid-button: LMButtonComponent
+        }
+      });
+    Formio.createForm(document.getElementById('formio'), {
+        components: [
+          {
+            label: 'LMButton',
+            key: 'fluid-button',
+            type: 'fluid-button'
+          }
+        ]
+      }
+      );</script>
+     

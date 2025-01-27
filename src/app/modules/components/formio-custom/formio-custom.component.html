@@ -1,0 +1,19 @@
+<div id="formio"></div>
+<script type="text/javacript">
+    Formio.use({
+        components: {
+          checkmatrix: CheckMatrix
+        }
+      });
+    Formio.createForm(document.getElementById('formio'), {
+        components: [
+          {
+            type: 'checkmatrix',
+            numRows: 6,
+            numCols: 6,
+            key: 'checkmatrix',
+            label: 'Check Matrix'
+          }
+        ]
+      }
+      );</script>

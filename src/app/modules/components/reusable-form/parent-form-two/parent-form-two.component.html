@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit2()">
+    <!-- Shared form group -->
+    <app-shared-form [header]="form2.get('header')" [parentGroup]="form2"></app-shared-form>
+
+    <!-- Non-shared -->
+    <div [formGroup]="form2">
+        <mat-form-field appearance="outline">
+            <mat-label>Your spouse</mat-label>
+            <input matInput placeholder="Your spouse" formControlName="spouse">
+        </mat-form-field>
+        &nbsp; &nbsp;
+        <button type="submit" mat-raised-button color="accent"><mat-icon>save</mat-icon></button> 
+    </div>
+</form>

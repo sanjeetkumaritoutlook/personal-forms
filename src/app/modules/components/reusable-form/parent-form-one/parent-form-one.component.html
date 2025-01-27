@@ -1,0 +1,19 @@
+<div class="mat-h2">Parent form one</div>
+
+
+<form (ngSubmit)="onSubmit1()">
+    <!-- Shared form group -->
+    <app-shared-form [header]="form1.get('header')" [parentGroup]="form1"></app-shared-form>
+
+    <!-- Non-shared -->
+    <div [formGroup]="form1">
+        <mat-form-field appearance="outline">
+            <mat-label>Your hobby</mat-label>
+            <input matInput placeholder="Your hobby" formControlName="hobby">
+        </mat-form-field>
+        &nbsp; &nbsp;
+        <button type="submit" mat-raised-button color="accent"><mat-icon>save</mat-icon></button> 
+    </div>
+</form>
+
+<mat-divider></mat-divider>

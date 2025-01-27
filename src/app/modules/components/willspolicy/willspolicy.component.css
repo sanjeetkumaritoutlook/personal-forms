@@ -1,0 +1,63 @@
+.wills-policy {
+    width: 67%;
+    margin: 0 auto;
+}
+.custom-willy-style {
+    margin-top: 10px;
+}
+.custom-willy-style .col-form-label , .custom-willy-style .col-form-label + div{
+    display: inline-block !important;
+    width: 49%;
+}
+
+
+
+
+
+
+button.btn.btn-primary.btn-md.fluid-willy-button{
+    color:red;
+  }
+          .fluid-willy-button .btn-primary{
+      background-color:rgb(153,229,234) !important;
+      border-color:rgb(153,229,234) !important;
+      color:rgb(52,55,65) !important;
+      fill:rgb(52,55,65) !important;
+      width:219px;
+      height:42px;
+      visibility:inherited;
+  }
+  .fluid-willy-button .btn-primary:hover:not(.disabled){
+      background-color:rgb(6,116,140) !important;
+      border-color:rgb(6,116,140) !important;
+      color:rgb(255,255,255) !important;
+      fill:rgb(255,255,255) !important;
+      width:219px;
+      height:42px;
+      visibility:inherited;
+  }
+  
+  .formio-component-fluid-button .fluid-btn.lm{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      min-width:7.5em;
+      padding:8px 32px;
+      text-align:center;
+      font-size:16px;
+      font-weight:700;
+      font-family:Roboto,Arial,sans-serif;
+      line-height:1.5;
+      margin-right:0.8em;
+      margin-bottom:1em;
+      border-width:1px;
+      border-style:solid;
+      border-radius:3px;
+      cursor:pointer;
+      text-decoration:none;
+      box-shadow:none;
+      transition:all 0.2s ease-in-out 0s;
+  
+  }
+ 

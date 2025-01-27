@@ -1,0 +1,1243 @@
+{
+	"title": "Document Wizard- Wills Excess Policy",
+	"components": [
+		{
+			"input": false,
+			"html": "<h3>Contact Information</h3>Complete the ActiveDocs Field",
+			"type": "content",
+			"conditional": {
+				"show": "",
+				"when": null,
+				"eq": ""
+			}
+		},
+
+		{
+			"tabindex": "1",
+			"tags": [],
+			"clearOnHide": true,
+			"hidden": false,
+			"input": true,
+			"tableView": true,
+			"inputType": "text",
+			"inputMask": "",
+			"label": "Broker First Name",
+			"key": "cinfo_broker_first_name",
+			"placeholder": "",
+			"prefix": "",
+			"suffix": "",
+			"multiple": false,
+			"customClass":"custom-willy-style",
+			"errorLabel":"custom first name error message",
+			"defaultValue": "",
+			"protected": false,
+			"unique": false,
+			"persistent": true,
+			"validate": {
+				"required": false,
+				"minLength": "",
+				"maxLength": "",
+				"pattern": "",
+				"custom": "",
+				"customPrivate": false
+			},
+			"conditional": {
+				"show": "",
+				"when": null,
+				"eq": ""
+			},
+			"type": "textfield"
+		},
+		{
+			"tabindex": "1",
+			"tags": [],
+			"clearOnHide": true,
+			"hidden": false,
+			"input": true,
+			"tableView": true,
+			"inputType": "text",
+			"inputMask": "",
+			"label": "Custom First Name",
+			"key": "custom_broker_first_name",
+			"placeholder": "",
+			"prefix": "",
+			"suffix": "",
+			"multiple": false,
+			"customClass":"custom-willy-style",
+			"errorLabel":"custom first name error message",
+			"defaultValue": "",
+			"protected": false,
+			"unique": false,
+			"persistent": true,
+			"validate": {
+				"required": true,
+				"minLength": "",
+				"maxLength": "",
+				"pattern": "",
+				"custom": "valid = input.length > 5 ? true : 'Test name must be at least 5 characters long'",
+				"customPrivate": "const { root } = instance;\nconst comp = root.getComponent('custom_broker_first_name');\n\nif (comp) {\n  comp.off('blur');\n  comp.on('blur', () => {\n    console.log('blur from form');\n  });\n  data.init = true;}"
+			},
+			"conditional": {
+				"show": "",
+				"when": null,
+				"eq": ""
+			},
+			"type": "textfield"
+		},
+        {
+			"tabindex": "2",
+			"tags": [],
+			"clearOnHide": true,
+			"hidden": false,
+			"input": true,
+			"tableView": true,
+			"inputType": "text",
+			"inputMask": "",
+			"label": "Broker Last Name",
+			"key": "cinfo_broker_last_name",
+			"placeholder": "",
+			"prefix": "",
+			"suffix": "",
+			"multiple": false,
+			"customClass":"custom-willy-style",
+			"defaultValue": "",
+			"protected": false,
+			"unique": false,
+			"persistent": true,
+			"validate": {
+				"required": false,
+				"minLength": "",
+				"maxLength": "",
+				"pattern": "",
+				"custom": "",
+				"customPrivate": false
+			},
+			"conditional": {
+				"show": "",
+				"when": null,
+				"eq": ""
+			},
+			"type": "textfield"
+		},
+		{
+			"tabindex": "3",
+			"tags": [],
+			"clearOnHide": true,
+			"hidden": false,
+			"input": true,
+			"tableView": true,
+			"inputType": "email",
+			"label": "Broker Contact Email",
+			"key": "cinfo_broker_contact_name",
+			"placeholder": "",
+			"prefix": "",
+			"suffix": "",
+			"customClass":"custom-willy-style",
+			"defaultValue": "",
+			"protected": false,
+			"unique": false,
+			"persistent": true,
+			"type": "email",
+			"validate": {
+				"required": false
+			},
+			"conditional": {
+				"show": "",
+				"when": null,
+				"eq": ""
+			},
+			"kickbox": {
+				"enabled": false
+			}
+		},
+		{
+			"tabindex": "4",
+			"tags": [],
+			"clearOnHide": true,
+			"hidden": false,
+			"input": true,
+			"tableView": true,
+			"inputType": "text",
+			"inputMask": "",
+			"label": "Underwriter Name",
+			"key": "cinfo_underwriter_name",
+			"placeholder": "",
+			"prefix": "",
+			"suffix": "",
+			"multiple": false,
+			"customClass":"custom-willy-style",
+			"defaultValue": "Sandy SN005",
+			"protected": false,
+			"unique": false,
+			"persistent": true,
+			"validate": {
+				"required": false,
+				"minLength": "",
+				"maxLength": "",
+				"pattern": "",
+				"custom": "",
+				"customPrivate": false
+			},
+			"conditional": {
+				"show": "",
+				"when": null,
+				"eq": ""
+			},
+			"type": "textfield"
+		},
+		{
+			"tabindex": "5",
+			"tags": [],
+			"clearOnHide": true,
+			"hidden": false,
+			"input": true,
+			"tableView": true,
+			"inputType": "email",
+			"label": "Underwriter Email Address-you will need to add a &quot;.&quot; to the email address",
+			"key": "cinfo_underwriter_email_address",
+			"placeholder": "",
+			"prefix": "",
+			"suffix": "",
+			"customClass":"custom-willy-style",
+			"defaultValue": "Sandy.SN005@liberty.com",
+			"protected": false,
+			"unique": false,
+			"persistent": true,
+			"type": "email",
+			"validate": {
+				"required": false
+			},
+			"conditional": {
+				"show": "",
+				"when": null,
+				"eq": ""
+			},
+			"kickbox": {
+				"enabled": false
+			}
+		},
+		{
+			"tabindex": "6",
+			"type": "select",
+			"label": "Underwriter Title",
+			"searchEnabled": false,
+			"customClass":"custom-willy-style",
+			"placeholder": "(select a value)",
+			"data": {
+				"values": [
+				{
+					"value": "raindropsOnRoses",
+					"label": "Underwriter Title One"
+				},
+				{
+					"value": "whiskersOnKittens",
+					"label": "Underwriter Title Two"
+				},
+				{
+					"value": "brightCopperKettles",
+					"label": "Underwriter Title Three"
+				},
+				{
+					"value": "warmWoolenMittens",
+					"label": "Underwriter Title Four"
+				}
+			  ]
+			},
+			"selectThreshold": 0.3,
+			"key": "cinfo_underwriter_title.titleMandatory",
+			"indexeddb": {
+                "filter": {}
+            },
+            "input": true,
+			"validate": {
+				"required": false
+			},
+			"conditional": {
+				"show": "",
+				"when": null,
+				"eq": ""
+			}
+			},
+		
+			{
+				"tabindex": "7",
+				"type": "select",
+				"label": "Office Location",
+				"searchEnabled": false,
+				"key": "cinfo_office_location",
+				"customClass":"custom-willy-style",
+				"placeholder": "Toronto",
+				"data": {
+					"values": [
+					{
+						"value": "melbourne",
+						"label": "Melbourne"
+					},
+					{
+						"value": "toronto",
+						"label": "Toronto"
+					},
+					{
+						"value": "newyork",
+						"label": "New York"
+					},
+					{
+						"value": "boston",
+						"label": "Boston"
+					}
+				  ],
+				 
+				 
+				 
+				  "input": "true"
+				},
+				"validate": {
+					"required": false
+				},
+				"conditional": {
+					"show": "",
+					"when": null,
+					"eq": ""
+				}
+				},     
+		
+				{
+					"tabindex": "8",
+					"type": "select",
+					"label": "What type of document is this?",
+					"key": "document_type",
+					"searchEnabled": false,
+					"customClass":"custom-willy-style",
+					"placeholder": "(Select a value)",
+					"data": {
+						"values": [
+						{
+							"value": "inceptionPolicy",
+							"label": "Inception Policy"
+						},
+						{
+							"value": "midterm",
+							"label": "Midterm"
+						}
+					  ],
+					 
+				
+					
+					  "input": "true"
+					},
+					"validate": {
+						"required": false
+					},
+					"conditional": {
+						"show": "",
+						"when": null,
+						"eq": ""
+					}
+					},   
+					{
+						"tabindex": "9",
+						"tags": [],
+						"clearOnHide": true,
+						"hidden": false,
+						"input": true,
+						"tableView": true,
+						"inputType": "text",
+						"inputMask": "",
+						"label": "INSURED_WEBSITE_ADDRESS",
+						"key": "cinfo_broker_first_name",
+						"placeholder": "",
+						"prefix": "",
+						"suffix": "",
+						"multiple": false,
+						"customClass":"custom-willy-style",
+						"defaultValue": "",
+						"protected": false,
+						"unique": false,
+						"persistent": true,
+						"validate": {
+							"required": false,
+							"minLength": "",
+							"maxLength": "",
+							"pattern": "",
+							"custom": "",
+							"customPrivate": false
+						},
+						"conditional": {
+							"show": "",
+							"when": null,
+							"eq": ""
+						},
+						"type": "textfield"
+					},
+					
+					{
+						"tabindex": "10",
+						"tags": [],
+						"clearOnHide": true,
+						"hidden": false,
+						"input": true,
+						"tableView": true,
+						"inputType": "text",
+						"inputMask": "",
+						"label": "POLICY_CURRENCY",
+						"key": "cinfo_broker_first_name",
+						"placeholder": "",
+						"prefix": "",
+						"suffix": "",
+						"multiple": false,
+						"customClass":"custom-willy-style",
+						"defaultValue": "",
+						"protected": false,
+						"unique": false,
+						"persistent": true,
+						"validate": {
+							"required": false,
+							"minLength": "",
+							"maxLength": "",
+							"pattern": "",
+							"custom": "",
+							"customPrivate": false
+						},
+						"conditional": {
+							"show": "",
+							"when": null,
+							"eq": ""
+						},
+						"type": "textfield"
+					},
+							
+					{
+						"tabindex": "11",
+						"tags": [],
+						"clearOnHide": true,
+						"hidden": false,
+						"input": true,
+						"tableView": true,
+						"inputType": "text",
+						"inputMask": "",
+						"label": "LIBERTY LEVEL OF VISIBILITY",
+						"key": "cinfo_broker_first_name",
+						"placeholder": "$10,0000",
+						"prefix": "",
+						"suffix": "",
+						"multiple": false,
+						"defaultValue": "",
+						"customClass":"custom-willy-style",
+						"protected": false,
+						"unique": false,
+						"persistent": true,
+						"validate": {
+							"required": false,
+							"minLength": "",
+							"maxLength": "",
+							"pattern": "",
+							"custom": "",
+							"customPrivate": false
+						},
+						"conditional": {
+							"show": "",
+							"when": null,
+							"eq": ""
+						},
+						"type": "textfield"
+					},
+
+					{
+						"tabindex": "12",
+						"tags": [],
+						"clearOnHide": true,
+						"hidden": false,
+						"input": true,
+						"tableView": true,
+						"inputType": "text",
+						"inputMask": "",
+						"label": "Total Underlying Levels of Liberty's Attachment Points",
+						"key": "cinfo_broker_first_name",
+						"placeholder": "$1",
+						"prefix": "",
+						"suffix": "",
+						"multiple": false,
+						"customClass":"custom-willy-style",
+						"defaultValue": "",
+						"protected": false,
+						"unique": false,
+						"persistent": true,
+						"validate": {
+							"required": false,
+							"minLength": "",
+							"maxLength": "",
+							"pattern": "",
+							"custom": "",
+							"customPrivate": false
+						},
+						"conditional": {
+							"show": "",
+							"when": null,
+							"eq": ""
+						},
+						"type": "textfield"
+					},
+					{
+						"tabindex": "13",
+						"tags": [],
+						"clearOnHide": true,
+						"hidden": false,
+						"input": true,
+						"tableView": true,
+						"inputType": "text",
+						"inputMask": "",
+						"label": "Premium",
+						"key": "cinfo_broker_first_name",
+						"placeholder": "$0",
+						"prefix": "",
+						"suffix": "",
+						"multiple": false,
+						"customClass":"custom-willy-style",
+						"defaultValue": "",
+						"protected": false,
+						"unique": false,
+						"persistent": true,
+						"validate": {
+							"required": false,
+							"minLength": "",
+							"maxLength": "",
+							"pattern": "",
+							"custom": "",
+							"customPrivate": false
+						},
+						"conditional": {
+							"show": "",
+							"when": null,
+							"eq": ""
+						},
+						"type": "textfield"
+					},
+					
+					{
+						"label": "INCEPT",
+						"format": "d-m-Y",
+						"dataGridLabel": false,
+						"tableView": false,
+						"enableTime": false,
+						"customClass":"custom-willy-style",
+						"customOptions": {
+						 
+						  "dateFormat": "U", 
+						  "minDate": "2020-02" 
+						},
+						"validate": {
+							"required": false,
+							"minLength": "",
+							"maxLength": "",
+							"pattern": "",
+							"custom": "",
+							"customPrivate": false
+						},
+						"key": "cinfo_broker_incept",
+						"type": "datetime",
+						"icon": "calendar",
+						"placeholder": "18 FEBRUARY 2021",
+						"suffix": "<i ref=\"icon\" class=\"fa fa-calendar\" style=\"\"></i>",
+						"widget": {
+						  "type": "calendar",
+						  "displayInTimezone": "viewer",
+						  "language": "de",
+						  "useLocaleSettings": false,
+						  "allowInput": true,
+						  "mode": "single",
+						  "enableTime": false,
+						  "noCalendar": false,
+						
+						  "hourIncrement": 1,
+						  "minuteIncrement": 1,
+						  "time_24hr": false
+						}
+					  },
+					
+					
+					{
+                        "type": "select",
+                        "label": "Model",
+                        "key": "model",
+                        "placeholder": "Select your model",
+						"customClass":"custom-willy-style",
+						"searchEnabled": true,
+                        "dataSrc": "url",
+                        "data": {
+                           
+							"url":"https://vpic.nhtsa.dot.gov/api/vehicles/getmodelsformake/make?format=json"
+                        },
+                        "valueProperty": "Model_Name",
+                        "template": "<span>{{ item.Model_Name }}</span>",
+                        "refreshOn": "make",
+                        "selectValues": "Results",
+						"validate": {
+							"required": false
+						  }
+                    },
+
+					{
+                        "type": "custom-select",
+                        "label": "Custom Model options",
+                        "key": "custommodel",
+                        "placeholder": "Select your custom model",
+						"customClass":"custom-willy-style",
+						"searchEnabled": false,
+
+						"dataSrc": "values",
+						"data": {
+                           
+							"values":{"Count":6,"Message":"Response returned successfully","SearchCriteria":"Make:make","Results":[{"Make_ID":3341,"Make_Name":"TRAILERMAKERS, LLC","Model_ID":7533,"Model_Name":"TRAILERMAKERS, LLC"},{"Make_ID":4463,"Make_Name":"TRAIL MAKER TRAILERS","Model_ID":9323,"Model_Name":"Trail Maker Trailers, Inc."},{"Make_ID":6930,"Make_Name":"WIDOWMAKERS","Model_ID":18485,"Model_Name":"WIDOWMAKERS"},{"Make_ID":7167,"Make_Name":"MEMORY MAKER","Model_ID":19256,"Model_Name":"Model 7000/3000"},{"Make_ID":8650,"Make_Name":"TURFMAKER CORPORATION","Model_ID":22701,"Model_Name":"TurfMaker Corporation"},{"Make_ID":8747,"Make_Name":"PLAYMAKER RV, INC.","Model_ID":22840,"Model_Name":"Playmaker RV, Inc."}]}
+ 
+                        },
+					
+                        "valueProperty": "Model_Name",
+                        "template": "<span>{{ item.Model_Name}}</span>",
+                        "refreshOn": "make",
+						"selectValues": "Results",
+
+						"validate": {
+							"required": false
+						  }
+                    },
+
+					{
+						"label": "EXPIRY",
+						"format": "d-m-Y",
+						"dataGridLabel": false,
+						"tableView": false,
+						"enableTime": false,
+						"customClass":"custom-willy-style",
+						"customOptions": {
+						 
+						  "dateFormat": "U", 
+						  "minDate": "2020-02" 
+						},
+						"validate": {
+							"required": false,
+							"minLength": "",
+							"maxLength": "",
+							"pattern": "",
+							"custom": "",
+							"customPrivate": false
+						},
+						"key": "cinfo_broker_expiry",
+						"type": "datetime",
+						"icon": "calendar",
+						"placeholder": "18 FEBRUARY 2021",
+						"widget": {
+						  "type": "calendar",
+						  "displayInTimezone": "viewer",
+						  "language": "de",
+						  "useLocaleSettings": false,
+						  "allowInput": true,
+						  "mode": "single",
+						  "enableTime": false,
+						  "noCalendar": false,
+						
+						  "hourIncrement": 1,
+						  "minuteIncrement": 1,
+						  "time_24hr": false
+						}
+					  },
+					  {
+						"label": "Are there any underlying excess carriers",
+						"optionsLabelPosition": "right",
+						"inline": true,
+						"customClass":"custom-willy-style",
+						"values": [
+							{
+								"label": "Yes",
+								"value": "yes",
+								"shortcut": ""
+							},
+							{
+								"label": "No",
+								"value": "no",
+								"shortcut": ""
+							}
+						],
+						"validate": {
+							"required": false,
+							"minLength": "",
+							"maxLength": "",
+							"pattern": "",
+							"custom": "",
+							"customPrivate": false
+						},
+						"key": "showBelowConditional",
+						"type": "radio",
+						"input": true
+					},
+
+
+
+					{
+						"label": "WISX0.1 is required?Pending and Prior Litigation Example(05/15)",
+						"optionsLabelPosition": "right",
+						"key": "showBelowConditional1",
+						"type": "radio",
+						"input": true,
+						"inline": true,
+						"customClass":"custom-willy-style",
+						"values": [
+							{
+								"label": "Yes",
+								"value": "yes",
+								"shortcut": ""
+							},
+							{
+								"label": "No",
+								"value": "no",
+								"shortcut": ""
+							}
+						],
+						"validate": {
+							"required": true,
+							"minLength": "",
+							"maxLength": "",
+							"pattern": "",
+							"custom": "",
+							"customPrivate": false
+						},
+					
+						"conditional": {
+							"show": "true",
+							"when": "showBelowConditional",
+							"eq": "yes"
+						}
+					},
+					
+					{
+						"label": "WISX0.1 is required? TRIA disclosure",
+						"optionsLabelPosition": "right",
+						"inline": true,
+						"customClass":"custom-willy-style",
+						"key": "showBelowConditional2",
+						"type": "radio",
+						"input": true,
+						"values": [
+							{
+								"label": "Yes",
+								"value": "yes",
+								"shortcut": ""
+							},
+							{
+								"label": "No",
+								"value": "no",
+								"shortcut": ""
+							}
+						],
+						"validate": {
+							"required": true,
+							"minLength": "",
+							"maxLength": "",
+							"pattern": "",
+							"custom": "",
+							"customPrivate": false
+						},
+						
+						"conditional": {
+							"show": "true",
+							"when": "showBelowConditional",
+							"eq": "yes"
+						}
+					},
+					
+					{
+						"label": "WISX0.1 is required? TRIA Cap on Losses",
+						"optionsLabelPosition": "right",
+						"inline": true,
+						"key": "showBelowConditional3",
+						"type": "radio",
+						"input": true,
+						"customClass":"custom-willy-style",
+						"values": [
+							{
+								"label": "Yes",
+								"value": "yes",
+								"shortcut": ""
+							},
+							{
+								"label": "No",
+								"value": "no",
+								"shortcut": ""
+							}
+						],
+						"validate": {
+							"required": true,
+							"minLength": "",
+							"maxLength": "",
+							"pattern": "",
+							"custom": "",
+							"customPrivate": false
+						},
+					
+						"conditional": {
+							"show": "true",
+							"when": "showBelowConditional",
+							"eq": "yes"
+						}
+					},
+
+					{
+						"tabindex": "17",
+						"tags": [],
+						"clearOnHide": true,
+						"hidden": false,
+						"input": true,
+						"tableView": true,
+						"inputType": "text",
+						"inputMask": "",
+						"label": "Signature Name",
+						"key": "cinfo_signature_name",
+						"placeholder": "",
+						"prefix": "",
+						"suffix": "",
+						"multiple": false,
+						"customClass":"custom-willy-style",
+						"defaultValue": "Sandy SNoo5",
+						"protected": false,
+						"unique": false,
+						"persistent": true,
+						"validate": {
+							"required": false,
+							"minLength": "",
+							"maxLength": "",
+							"pattern": "",
+							"custom": "",
+							"customPrivate": false
+						},
+						"type": "textfield",
+						"logic": [
+							{
+								"name": "SignatureLogic",
+								"trigger": {
+									"type": "simple",
+									"simple": {
+										"show": true,
+										"when": "cinfo_underwriter_title.titleMandatory",
+										"eq": "raindropsOnRoses"
+									}
+								},
+								"actions": [
+									{
+										"name": "SignatureLogicon1",
+										"type": "property",
+										"property": {
+											"label": "Required",
+											"value": "validate.required",
+											"type": "boolean"
+										},
+										"state": true
+									}
+								]
+							}
+						],
+						"conditional": {
+							"show": true,
+							"when": "cinfo_underwriter_title.titleMandatory",
+							"eq": "raindropsOnRoses"
+						}
+						
+					},
+					
+					
+					{
+						"label": "Make Field Mandatory",
+						"widget": "choicesjs",
+						"customClass":"custom-willy-style",
+						"tableView": true,
+						"data": {
+							"values": [
+								{
+									"label": "Yes",
+									"value": "1"
+								},
+								{
+									"label": "No",
+									"value": "2"
+								}
+							]
+						},
+						"selectThreshold": 0.3,
+						"key": "myObject.genderMandatory",
+						"type": "select",
+						"searchEnabled": false,
+						"indexeddb": {
+							"filter": {}
+						},
+						"input": true
+					},
+					
+					
+					{
+						"label": "Field",
+						"widget": "choicesjs",
+						"customClass":"custom-willy-style",
+						"tableView": true,
+						"data": {
+							"values": [
+								{
+									"label": "Male",
+									"value": "male"
+								},
+								{
+									"label": "Female",
+									"value": "female"
+								}
+							]
+						},
+						"selectThreshold": 0.3,
+						"key": "myObject2.genderId",
+						"logic": [
+							{
+								"name": "GenderIdLogic",
+								"trigger": {
+									"type": "simple",
+									"simple": {
+										"show": true,
+										"when": "myObject.genderMandatory",
+										"eq": "1"
+									}
+								},
+								"actions": [
+									{
+										"name": "GenderIdActionOn1",
+										"type": "property",
+										"property": {
+											"label": "Required",
+											"value": "validate.required",
+											"type": "boolean"
+										},
+										"state": true
+									}
+								]
+							}
+						],
+						"type": "select",
+						"searchEnabled": false,
+						"indexeddb": {
+							"filter": {}
+						},
+						"input": true
+					},
+
+
+
+					{
+						"tabindex": "18",
+						"type": "select",
+						"label": "TRIA",
+					
+						"searchEnabled": false,
+						"customClass":"custom-willy-style",
+						"placeholder": "[select or type a value]",
+						"tableView": true,
+						"widget": "choicesjs",
+						"readOnlyValue": false,
+					
+						"data": {
+							"values": [
+							{
+								"label": "Not Offered",
+								"value": "notoffered"
+							},
+							{
+								"label": "Offered - accepted",
+								"value": "offeraccept"
+							},
+							{
+								"label": "Offered - Rejected",
+								"value": "offerreject"
+							}
+						  ],
+						  "selectThreshold": 0.3,
+						  "key": "myObject.document_type_one",
+						  "indexeddb": {
+							  "filter": {}
+						  },
+						  "input": "true"
+						},
+						"validate": {
+							"required": false
+						},
+						"conditional": {
+							"show": "",
+							"when": null,
+							"eq": ""
+						}
+						},   
+					
+						{
+							"type": "custom-select",
+							"widget": "choicesjs",
+							"validate": {
+							     "required": true,
+								 "onlyAvailableItems": false
+
+						         	},
+							
+							 "customOptions ": { "addItems": true,  "addItemText": true},
+							 "noResultsText":"Press enter to add",
+							"clearOnHide": true,
+							"persistent": true,
+							"unique": false,
+							"protected": false,
+							"multiple": true,
+							"template": "<span>{{ item.label }}</span>",
+							"authenticate": false,
+							"filter": "",
+							"refreshOn": "",
+							"defaultValue": "",
+							"valueProperty": "",
+							"dataSrc": "values",
+							"customClass":"custom-willy-style",
+							"data": {
+							"custom": "",
+							"resource": "",
+							"url": "",
+							"json": "",
+							"values": [
+								{
+									"label": "Not Offered 1",
+									"value": "notoffereds"
+								},
+								{
+									"label": "Offered - accepted",
+									"value": "offeraccepts"
+								},
+								{
+									"label": "Offered - Rejected",
+									"value": "offerrejects"
+								},
+							 [
+							]
+							]
+							},
+							"placeholder": "[select or type a value]",
+							"key": "document_type_custom_select",
+							"label": "TRIA",
+							"tableView": true,
+							"input": true,
+							"hidden": false
+							},
+					
+							{
+								"label": "Dynamic Tables",
+								"key": "children",
+								"type": "datagrid",
+								"input": true,
+								"validate": {
+								  "minLength": 0,
+								  "maxLength": 100
+								},
+								"logic": [
+									{
+										"name": "SignatureLogic",
+										"trigger": {
+											"type": "simple",
+											"simple": {
+												"show": true,
+												"when": "cinfo_underwriter_title.titleMandatory",
+												"eq": "raindropsOnRoses"
+											}
+										},
+										"actions": [
+											{
+												"name": "SignatureLogicon1",
+												"type": "property",
+												"property": {
+													"label": "Required",
+													"value": "validate.required",
+													"type": "boolean"
+												},
+												"state": true
+											}
+										]
+									}
+								],
+								"conditional": {
+									"show": true,
+									"when": "cinfo_underwriter_title.titleMandatory",
+									"eq": "raindropsOnRoses"
+								},
+							
+								"components": [
+								  {
+									"label": "First Name",
+									"key": "firstName",
+									"type": "textfield",
+									"input": true
+								  },
+								  {
+									"label": "Middle Name",
+									"key": "lastName",
+									"type": "textfield",
+									"input": true
+								  },
+								  {
+									"label": "Last Name",
+									"key": "lastName",
+									"type": "textfield",
+									"input": true
+								  }
+									 
+								
+								]
+								
+							  },
+
+							  {
+									"type": "select",
+									"input": true,
+							         "key": "buttonStyle",
+									 "customClass":"custom-willy-style",
+									"label": "Bootstrap button color style",
+							 	"tooltip": "<a href='https://getbootstrap.com/docs/4.0/components/buttons/'>Button style</a>",
+											"weight": 400,
+											"defaultValue": "primary",
+											"dataSrc": "values",
+											"data": {
+											  "values": [{
+												  "label": "Primary",
+												  "value": "primary"
+												}, {
+												  "label": "Secondary",
+												  "value": "secondary"
+												}]
+											}
+										},
+							
+
+										{
+											"type": "textfield",
+											"key": "iAmATrigger",
+											"label": "I am a trigger",
+											"customClass":"custom-willy-style",
+											"placeholder": "Enter joe or bob.",
+											"input": true
+										  },
+										  {
+											"type": "textfield",
+											"key": "lastName",
+											"label": "Last Name",
+											"placeholder": "Enter your last name",
+											"customClass":"custom-willy-style",
+											"input": true,
+											"tooltip": "Enter your <strong>Last Name</strong>",
+											"description": "Enter your <strong>Last Name</strong>",
+											"logic": [
+											  {
+												"name": "Bob Logic",
+												"trigger": {
+												  "type": "simple",
+												  "simple": {
+													"show": true,
+													"when": "iAmATrigger",
+													"eq": "bob"
+												  }
+												},
+												"actions": [
+												  {
+													"name": "Set to snob",
+													"type": "value",
+													"value": "value = \"snob\";"
+												  }
+												]
+											  },
+											  {
+												"name": "Joe Logic",
+												"trigger": {
+												  "type": "simple",
+												  "simple": {
+													"show": true,
+													"when": "iAmATrigger",
+													"eq": "joe"
+												  }
+												},
+												"actions": [
+												  {
+													"name": "Set schmoe",
+													"type": "value",
+													"value": "value = \"schmoe\";"
+												  }
+												]
+											  }
+											]
+										  },		
+					
+
+		{
+			"tabindex": "19",
+			"conditional": {
+				"eq": "",
+				"when": null,
+				"show": ""
+			},
+			"tags": [],
+			"input": true,
+			"label": "Submit",
+			"tableView": false,
+			"key": "submit",
+			"size": "md",
+			"leftIcon": "",
+			"rightIcon": "",
+			"block": false,
+			"customClass":"fluid-willy-button",
+			"action": "submit",
+			"disableOnInvalid": true,
+			"theme": "primary",
+			"type": "fluid-button"
+		}
+	],
+	"owner": "554806425867f4ee203ea861",
+	"submissionAccess": [
+		{
+			"type": "create_all",
+			"roles": []
+		},
+		{
+			"type": "read_all",
+			"roles": []
+		},
+		{
+			"type": "update_all",
+			"roles": []
+		},
+		{
+			"type": "delete_all",
+			"roles": []
+		},
+		{
+			"type": "create_own",
+			"roles": [
+				"5692b920d1028f01000407e6"
+			]
+		},
+		{
+			"type": "read_own",
+			"roles": []
+		},
+		{
+			"type": "update_own",
+			"roles": []
+		},
+		{
+			"type": "delete_own",
+			"roles": []
+		}
+	],
+	"access": [
+		{
+			"type": "read_all",
+			"roles": [
+				"5692b920d1028f01000407e4",
+				"5692b920d1028f01000407e5",
+				"5692b920d1028f01000407e6"
+			]
+		}
+	],
+	"tags": []
+
+}

@@ -1,0 +1,27 @@
+<div id="formio"></div>
+
+<script type="text/javacript">
+    Formio.use({
+        components: {
+            fluid-button: LMSelectComponent
+        }
+      });
+    Formio.createForm(document.getElementById('formio'), {
+        components: [
+          {
+            label: 'Select',
+            key: 'select',
+            type: 'custom-select',
+            dataSrc: 'values',
+						data: {
+                           
+							values: totalAngularPackages
+                        },
+             valueProperty: 'Model_Name',
+             template: '<span>{{ item.Model_Name}}</span>',
+             refreshOn: 'make',
+             selectValues: 'Results'
+          }
+        ]
+      }
+      );</script>

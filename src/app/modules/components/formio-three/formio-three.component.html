@@ -1,0 +1,6 @@
+<div class="card">
+    <div class="card-body">
+        <formio [form]="form" (submit)="onSubmit()"></formio>
+        <pre *ngIf="rendered">{{form | json}}</pre>
+    </div>
+  </div>

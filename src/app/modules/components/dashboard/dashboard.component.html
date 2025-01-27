@@ -1,0 +1,55 @@
+<div class="container">    
+    <div class="col-md-6 col-md-offset-3 loginBox">    
+        Welcome,  {{id}}    
+        <a href="javascript:void(0);" (click)="logout()">Logout</a>    
+    </div>    
+  </div>  
+  <!-- <fluid-theme-provider [theme]='theme'></fluid-theme-provider>
+ -->
+<h1>Document wizard-'Wills excess Policy'</h1>
+<app-willspolicy></app-willspolicy>
+
+
+<p>Angular Template driven select Forms</p>
+
+    <form  [formGroup]="myGroup">
+        <select  formControlName="CountryName" (change)="ind = $event.target.value">
+          <option *ngFor="let country of data.Countries" [value]="country.id">{{country.CountryName}}</option>
+        </select>
+        <select formControlName="states" (change)="val = $event.target.value">
+          <option *ngFor="let state of data.Countries[ind].States" [value]="state.id">{{state.StateName}}
+          </option>
+        </select> 
+        <select formControlName="Cities" (change)="cityVal = $event.target.value">
+          <option *ngFor="let Cities of data.Countries[ind].States[val].Cities"  [value]="Cities.id">{{Cities.CityName}}
+      
+              </option>
+        
+        //......   and so on keep updating your options for all nested array ....
+            </select> 
+        
+        </form >
+
+
+    <div class="form-group">
+        <label for="contactMethod">Contact method</label>
+        <select 
+            name="contactMethod" 
+            id="contactMethod" 
+            class="form-control"
+            [(ngModel)]="contact.contactMethod"   >
+            <option *ngFor="let method of contactMethods" [value]="method.id">{{ method.label }}</option>
+        </select>
+    </div>
+
+  <p> Custom jscn schema 2</p>
+   <app-formio-three></app-formio-three> 
+   <p>ngx-schema-form</p>
+   <app-minimalform></app-minimalform>
+   <p> Custom json schema</p>
+  <app-formio-two></app-formio-two>
+  <p> json schema from URL</p>
+<app-formio></app-formio>
+
+  <!-- <app-parent-form-one></app-parent-form-one>
+  <app-parent-form-two></app-parent-form-two> -->

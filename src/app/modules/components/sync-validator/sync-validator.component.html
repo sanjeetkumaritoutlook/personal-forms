@@ -1,0 +1,14 @@
+<mat-form-field>
+
+    <input matInput name="units" 
+           [(ngModel)]="activeEffect.measurement.units"
+           yesNoValidator="yes" required>
+
+    <mat-error *ngIf="form1.controls['units']?.errors?.required">
+        Units is required.
+    </mat-error>
+    <mat-error *ngIf="form1.controls['units']?.errors?.appYesNoValidator">
+        {{ form1.controls['units']?.errors?.appYesNoValidator }}
+    </mat-error>
+
+</mat-form-field>

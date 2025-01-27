@@ -1,0 +1,18 @@
+<div id="formio"></div>
+<script type="text/javacript">
+    Formio.use({
+        components: {
+          header: HeaderComponent
+        }
+      });
+    Formio.createForm(document.getElementById('formio'), {
+        components: [
+          {
+            type: 'header',
+            tag: 'h2',
+            key: 'header',
+            label: 'Header'
+          }
+        ]
+      }
+      );</script>
