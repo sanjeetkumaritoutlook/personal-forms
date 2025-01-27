@@ -5,9 +5,9 @@
 export const environment = {
   production: false,
   
-  fluidScriptESM: '/fluid/build/fluid.esm.js',
-  fluidScriptLegacy: '/fluid/build/fluid.js',
-  fluidStyleSheet: '/fluid/build/fluid.css'
+  fluidScriptESM: 'https://fluid.libertymutual.com/fluid/build/fluid.esm.js',
+  fluidScriptLegacy: 'https://fluid.libertymutual.com/fluid/build/fluid.js',
+  fluidStyleSheet: 'https://fluid.libertymutual.com/fluid/build/fluid.css'
 
   // FLUID Prod
   // fluidScriptESM: 'https://fluid.lmig.com/fluid/build/fluid.esm.js',
